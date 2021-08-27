@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Mulish", sans-serif;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  background: #EEEDE7;
+  padding: 50px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+  padding-top: 20px;
+}
+
+.container .list li {
+  width: calc(100% / 3 - 30px);
+  margin: 0 15px 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .container .list li {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .container .list li {
+    width: calc(100% / 1 - 30px);
+  }
+}
+
+.container .list li .item {
+  padding: 15px;
+  display: block;
+  border-radius: 15px;
+  background-color: #EBF5F7;
+  position: relative;
+}
+
+@media screen and (max-width: 541px) {
+  .container .list li .item {
+    padding: 60px;
+  }
+}
+
+.container .list li .item .image {
+  position: relative;
+}
+
+.container .list li .item .image > img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.container .list li .item .image .number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, left bottom, from(#00a780), to(#057a5e));
+  background: linear-gradient(to bottom, #00a780, #057a5e);
+  -webkit-animation: 10s changeColor infinite alternate;
+          animation: 10s changeColor infinite alternate;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.container .list li .item .title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 541px) {
+  .container .list li .item .title {
+    font-size: 30px;
+  }
+}
+
+.container .list li .item .actions {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px -7px 0;
+}
+
+.container .list li .item .actions a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #5BB0BA;
+  margin: 0 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+@media screen and (max-width: 541px) {
+  .container .list li .item .actions a {
+    font-size: 30px;
+    height: 80px;
+  }
+}
+
+.container .list li .item .actions a:hover {
+  -webkit-box-shadow: inset 400px 0 0 0 #FFAEBC;
+          box-shadow: inset 400px 0 0 0 #FFAEBC;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 541px) {
+  footer {
+    font-size: 35px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Montserrat", sans-serif;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  padding: 50px;
+  background: #eef0f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.component {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 32px 23px -25px rgba(70, 93, 169, 0.13);
+          box-shadow: 0 32px 23px -25px rgba(70, 93, 169, 0.13);
+}
+
+.component h4 {
+  font-size: 24px;
+  color: #1a2250;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.component .action {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.component .action a {
+  color: #6189ff;
+  font-size: 20px;
+  font-weight: 600;
+  background: url(../img/icon-right-arrow.svg) no-repeat right;
+  padding-right: 30px;
+}
+
+.component .action a.btn {
+  padding: 0 70px;
+  height: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#8bcdff), to(#6487ff));
+  background: linear-gradient(to bottom right, #8bcdff, #6487ff);
+  color: #fff;
+  border-radius: 78px;
+  margin-right: 40px;
+  -webkit-box-shadow: 0 20px 25px -15px rgba(108, 157, 243, 0.6);
+          box-shadow: 0 20px 25px -15px rgba(108, 157, 243, 0.6);
+}
+
+.component--web1 {
+  margin-bottom: 50px;
+  padding: 65px 65px 45px;
+  max-width: 1360px;
+}
+
+.component--web1 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -16px;
+}
+
+@media screen and (max-width: 768px) {
+  .component--web1 ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.component--web1 ul li {
+  margin-right: 20px;
+}
+
+.component--web1 ul li a {
+  display: block;
+  padding: 20px 50px 20px 40px;
+  font-size: 20px;
+  color: #5f85ff;
+  font-weight: 500;
+  line-height: 31px;
+  position: relative;
+  border-radius: 12px;
+  -webkit-transition: 300ms background, 300ms color;
+  transition: 300ms background, 300ms color;
+  background: url(../img/icon-right-arrow.svg) no-repeat calc(100% - 20px);
+}
+
+.component--web1 ul li a::before {
+  content: "";
+  width: 4px;
+  border-radius: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8bcdff), to(#6487ff));
+  background: linear-gradient(to bottom, #8bcdff, #6487ff);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+}
+
+.component--web1 ul li a:hover {
+  background-image: url(../img/icon-right-arrow-hover.svg);
+  background-color: #f6f8ff;
+  color: #1a2250;
+}
+
+.component--web2 {
+  margin-bottom: 50px;
+  max-width: 620px;
+  padding: 65px 75px;
+  text-align: center;
+}
+
+.component--web2 p {
+  font-size: 20px;
+  color: #1a2250;
+  font-weight: 500;
+  line-height: 31px;
+  margin-top: -15px;
+  margin-bottom: 50px;
+}
+
+.component--web3 {
+  max-width: 685px;
+  padding: 65px;
+}
+
+.component--web3 h2 {
+  font-size: 34px;
+  color: #1a2250;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.component--web3 p {
+  font-size: 24px;
+  color: #1a2250;
+  font-weight: 500;
+  margin-bottom: 40px;
+  line-height: 36px;
+}
+/*# sourceMappingURL=style.css.map */

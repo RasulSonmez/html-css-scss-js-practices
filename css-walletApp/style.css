@@ -1,0 +1,557 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Louis George Cafe';
+  -webkit-overflow-scrolling: touch;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1A212A;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 250vh;
+  }
+}
+
+.app {
+  width: 375px;
+  height: 667px;
+  overflow: auto;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  margin: 0 30px;
+}
+
+.app {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    margin: 30px !important;
+  }
+}
+
+.app .app-inner {
+  height: calc(100% - 60px);
+  overflow: auto;
+}
+
+.app .app-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 27px 24px;
+}
+
+.app .app-header .balance .text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.app .app-header .balance .money {
+  font-size: 38px;
+  color: #fff;
+}
+
+.app .app-header .avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #157AFF;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.5);
+          box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.5);
+}
+
+.app .actions {
+  overflow-x: auto;
+  margin-bottom: 30px;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.app .actions ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .actions ul li {
+  padding: 0 15px;
+  scroll-snap-align: start;
+}
+
+.app .actions ul li:first-child {
+  padding-left: 24px;
+}
+
+.app .actions ul li:last-child {
+  padding-right: 24px;
+}
+
+.app .actions ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.app .actions ul li a .icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 24px;
+  background-color: rgba(83, 95, 109, 0.19);
+  color: #fff;
+  font-size: 24px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.app .actions ul li a .icon i.icon-card {
+  font-size: 20px;
+}
+
+.app .actions ul li a .text {
+  font-size: 14px;
+  color: #fff;
+  margin-top: 13px;
+}
+
+.app .transactions {
+  padding: 14px 24px;
+  background-color: #1B242E;
+  border-radius: 48px 48px 0 0;
+}
+
+.app .transactions .transation-list li {
+  margin-bottom: 17px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(226, 233, 255, 0.1);
+}
+
+.app .transactions .transation-list li:last-child {
+  border: none;
+}
+
+.app .transactions .transation-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .transactions .transation-list li a .icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.app .transactions .transation-list li a .icon img {
+  max-height: 45px;
+  max-width: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.app .transactions .transation-list li a .icon.with-bg {
+  background-color: #fff;
+}
+
+.app .transactions .transation-list li a .icon i {
+  color: #157AFF;
+  font-size: 24px;
+}
+
+.app .transactions .transation-list li a .transaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .transactions .transation-list li a .transaction .title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.app .transactions .transation-list li a .transaction .date {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+}
+
+.app .transactions .transation-list li a .money {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.app h6 {
+  font-size: 16px;
+  color: #fff;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: normal;
+}
+
+.app h6 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app h6 .buttons a {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 15px;
+  background-color: rgba(83, 95, 109, 0.19);
+  color: #fff;
+  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-left: 18px;
+}
+
+.app .menu {
+  background-color: #1A212A;
+}
+
+.app .menu ul {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .menu ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.app .menu ul li a {
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 28px;
+}
+
+.app .menu ul li a i.icon-pig {
+  font-size: 24px;
+}
+
+.app .menu ul li.active a {
+  color: #157AFF;
+}
+
+.app .page {
+  padding: 24px;
+}
+
+.app .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.app .back .back-btn {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .back .back-btn i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.app .back .more-btn {
+  color: #fff;
+  font-size: 30px;
+}
+
+.app .swiper-container {
+  margin: 0 -24px 49px;
+  padding-bottom: 45px;
+}
+
+.app .swiper-container .swiper-slide {
+  width: 331px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.app .swiper-container .swiper-slide:last-child {
+  width: 361px;
+  padding-right: 24px;
+}
+
+.app .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  opacity: 1;
+}
+
+.app .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+
+.app .card {
+  min-width: 307px;
+  width: 307px;
+  height: 172px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 22px 21px 16px 27px;
+}
+
+.app .card .bank-name {
+  font-size: 16px;
+  color: #fff;
+}
+
+.app .card .card-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .card .card-information div {
+  font-size: 15px;
+  color: #fff;
+}
+
+.app .card .card-information div span {
+  margin-right: 10px;
+}
+
+.app .card img {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+.app .card.bg-dark {
+  background: -webkit-gradient(linear, left top, right top, from(#141414), to(#292929));
+  background: linear-gradient(to right, #141414, #292929);
+}
+
+.app .card.bg-blue {
+  background: -webkit-gradient(linear, left top, right top, from(#6289FF), to(#5252FF));
+  background: linear-gradient(to right, #6289FF, #5252FF);
+}
+
+.app .peoples {
+  margin: 0 -24px 45px;
+}
+
+.app .peoples ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+.app .peoples ul li {
+  scroll-snap-align: center;
+  margin-right: 15px;
+}
+
+.app .peoples ul li:first-child {
+  padding-left: 24px;
+}
+
+.app .peoples ul li:last-child {
+  padding-right: 24px;
+}
+
+.app .peoples ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.app .peoples ul li a .icon {
+  width: 60px;
+  height: 60px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #157AFF;
+  border-radius: 24px;
+  color: #fff;
+  -webkit-box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+          box-shadow: 0 6px 12px 0 rgba(21, 122, 255, 0.3);
+}
+
+.app .peoples ul li a img {
+  width: 60px;
+  border-radius: 24px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.17);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.app .peoples ul li a .name {
+  margin-top: 17px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.app .settings-menu {
+  border-top: 1px solid rgba(226, 233, 255, 0.1);
+}
+
+.app .settings-menu ul li {
+  border-bottom: 1px solid rgba(226, 233, 255, 0.1);
+}
+
+.app .settings-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.app .settings-menu ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.app .settings-menu ul li a i:first-child {
+  width: 30px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #157AFF;
+}
+
+.app .settings-menu ul li a i.icon-pincode {
+  font-size: 12px;
+}
+
+.app .settings-menu ul li a .icon-arrow-right {
+  margin-left: auto;
+  font-size: 12px;
+  padding-right: 15px;
+}
+/*# sourceMappingURL=style.css.map */
