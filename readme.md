@@ -31,6 +31,7 @@ These projects have been prepared from scratch after watching the [#frontendaily
 26. Cards
 27. Chat İnterface
 
+<u> Additions will be made </u>
 
 ## [Live website](https://htm-css-scss-js-practices.netlify.app/)
 
