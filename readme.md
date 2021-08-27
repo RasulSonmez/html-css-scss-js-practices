@@ -32,7 +32,7 @@ These projects have been prepared from scratch after watching the [#frontendaily
 27. Chat İnterface
 
 
-## [Demo website](https://javascript-practices.vercel.app/)
+## [Live website](https://htm-css-scss-js-practices.netlify.app/)
 
 # Project Structure
 
